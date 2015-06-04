@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title data-ng-bind="state.current.title"></title>
+	<link rel="stylesheet" href="vendor/angular-material/angular-material.css">
+	<link rel="stylesheet" href="vendor/angular-material/modules/css/angular-material-layout.css">
+
+	<!-- build:css ../dest/styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+</head>
+<body>
+	<div layout="row">
+		<side-nav-menu></side-nav-menu>
+		<div layout="column" tabindex="-1" role="main" flex="">
+			<nav-menu></nav-menu>
+			<md-content data-ui-view="" class="md-default-theme"></md-content>
+		</div>
+	</div>
+	<!-- build:js ../dest/scripts/main.js -->
+	<script src="vendor/requirejs/require.js" data-main="app/main.js" type="text/javascript"></script>
+	<!-- endbuild -->
+</body>
+</html>

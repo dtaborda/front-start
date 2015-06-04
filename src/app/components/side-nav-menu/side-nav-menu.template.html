@@ -1,0 +1,21 @@
+<div layout="column">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('md')">
+        <md-toolbar class="md-theme-indigo">
+            <h1 class="md-toolbar-tools">Sidenav Left</h1>
+        </md-toolbar>
+        <md-content flex="" role="navigation" class="md-default-theme">
+            <ul>
+                <li data-ng-repeat="item in sideNavigationCtrl.items">
+                   <menu-link>
+                        <a  class="md-button md-default-theme"
+                            ng-class="{'active' : isSelected()}"
+                            ui-sref="{{item.state}}">
+                            {{::item.title}}
+                        </a>
+                    </menu-link>
+                </li>
+            </ul>
+        </md-content>
+    </md-sidenav>
+</div>
+
