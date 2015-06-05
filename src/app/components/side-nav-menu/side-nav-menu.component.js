@@ -19,16 +19,31 @@ define('side-nav-menu.component',['angular'],
 						},
 						controller: [
 							'$scope',
-							function navMenuController(scope){
+							'$timeout',
+							'$mdSidenav',
+							'$mdUtil',
+							'$log',
+							function navMenuController(scope,timeout,mdSidenav,mdUtil,log){
 
-								var self = this;
+								var vm = this;
+
+								function closeSideNav(id) {
+							    	mdSidenav(id).close()
+							        	.then(function () {
+							          		log.debug("close " + id + " is done");
+							        	});
+							    };
 
 								function init(){
-									self.items = [
+									vm.items = [
 										{ title: 'Home', icon: 'flaticon-dwelling1', state:'home'  },
 										{ title: 'About', icon: 'flaticon-menu45', state:'about'  },
 										{ title: 'Login', icon: 'flaticon-menu45', state:'login'  }
 									];
+
+									angular.extend(vm, {
+										closeSideNav: closeSideNav
+									});
 								}
 
 								init();

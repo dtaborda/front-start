@@ -1,5 +1,5 @@
 <div layout="column">
-    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('md')">
+    <md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
         <md-toolbar class="md-theme-indigo">
             <h1 class="md-toolbar-tools">Sidenav Left</h1>
         </md-toolbar>
@@ -9,7 +9,8 @@
                    <menu-link>
                         <a  class="md-button md-default-theme"
                             ng-class="{'active' : isSelected()}"
-                            ui-sref="{{item.state}}">
+                            ui-sref="{{item.state}}"
+                            ng-click="sideNavigationCtrl.closeSideNav('left')">
                             {{::item.title}}
                         </a>
                     </menu-link>

@@ -25,15 +25,34 @@ define('nav-menu.component',['angular'],
 
 						controller: [
 							'$scope',
-							function navMenuController(scope){
+							'$timeout',
+							'$mdSidenav',
+							'$mdUtil',
+							'$log',
+							function navMenuController(scope,timeout,mdSidenav,mdUtil,log){
 
 								var vm = this;
+							    /**
+							     * Build handler to open/close a SideNav; when animation finishes
+							     * report completion in console
+							     */
+							    function buildToggler(navID) {
+							      var debounceFn = mdUtil.debounce(function(){
+							            mdSidenav(navID)
+							              .toggle()
+							              .then(function () {
+							                log.debug("toggle " + navID + " is done");
+							              });
+							          },300);
+							      return debounceFn;
+							    };
 
-								//scope.currentTab = 2;
-
-								function currentTab(){
-									return vm.currentTab
-								};
+								function closeSideNav(id) {
+							    	mdSidenav(id).close()
+							        	.then(function () {
+							          		log.debug("close " + id + " is done");
+							        	});
+							    };
 
 								function init(){
 									vm.items = [
@@ -42,8 +61,11 @@ define('nav-menu.component',['angular'],
 										{ title: 'Login', icon: 'flaticon-menu45', state:'login'  }
 									];
 
+									vm.toggleLeft = buildToggler('left');
+								    vm.toggleRight = buildToggler('right');
+
 									angular.extend(vm, {
-										currentTab: currentTab
+
 									});
 								}
 
