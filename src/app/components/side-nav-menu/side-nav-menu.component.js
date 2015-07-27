@@ -11,7 +11,7 @@ define('side-nav-menu.component',['angular'],
 
 						},
 						controllerAs:'sideNavigationCtrl',
-						bindToController: true,
+
 						templateUrl: 'app/components/side-nav-menu/side-nav-menu.template.html',
 						replace:true,
 						link: function(scope){
@@ -35,10 +35,19 @@ define('side-nav-menu.component',['angular'],
 							    };
 
 								function init(){
+									/*vm.items = [
+										{ title: 'Home', icon: '', state:'home'  },
+										{ title: 'Pixels', icon: '', state:'pixels'  },
+										{ title: 'Meta Viewport', icon: '', state:'viewport'  },
+										{ title: 'Debugging', icon: '', state:'debugging'  },
+										{ title: 'Media Queries', icon: '', state:'about'  },
+										{ title: 'Responsive Tables', icon: '', state:'login'  }
+									];*/
+
 									vm.items = [
-										{ title: 'Home', icon: 'flaticon-dwelling1', state:'home'  },
-										{ title: 'About', icon: 'flaticon-menu45', state:'about'  },
-										{ title: 'Login', icon: 'flaticon-menu45', state:'login'  }
+										{ title: 'Home', icon: '', state:'home'  },
+										{ title: 'Videos', icon: '', state:'pixels'  },
+										{ title: 'Contacts', icon: '', state:'debugging'  }
 									];
 
 									angular.extend(vm, {

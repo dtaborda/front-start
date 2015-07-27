@@ -18,8 +18,21 @@
 			'home.controller':'app/routes/home/home.controller',
 			'login.route':'app/routes/login/login.route',
 			'login.controller':'app/routes/login/login.controller',
+
+			'pixels.route':'app/routes/pixels/pixels.route',
+			'pixels.controller':'app/routes/pixels/pixels.controller',
+
+			'viewport.route':'app/routes/viewport/viewport.route',
+			'viewport.controller':'app/routes/viewport/viewport.controller',
+
+			'debugging.route':'app/routes/debugging/debugging.route',
+			'debugging.controller':'app/routes/debugging/debugging.controller',
+
+
 			'nav-menu.component': 'app/components/nav-menu/nav-menu.component',
 			'side-nav-menu.component': 'app/components/side-nav-menu/side-nav-menu.component',
+			'side-nav-user.component': 'app/components/side-nav-user/side-nav-user.component',
+			'angular-youtube':'vendor/angular-youtube-mb/dist/angular-youtube-embed.min',
 			'component.component': 'app/components/component/component.component'
 		},
 		shim:{
@@ -37,6 +50,9 @@
 				deps:['angular', 'angular-aria', 'angular-animate']
 			},
 			'angular-router':{
+				deps:['angular']
+			},
+			'angular-youtube':{
 				deps:['angular']
 			}
 		}

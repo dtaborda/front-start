@@ -1,24 +1,29 @@
 
-<md-toolbar layout="row" class="md-whiteframe-z1">
-    <md-button hide-gt-md class="md-icon-button" aria-label="Settings"  ng-click="navigationCtrl.toggleLeft()">
-        <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-    </md-button>
+<md-toolbar layout="row" class="md-whiteframe-z2">
+    <div class="md-toolbar-tools">
+        <md-button hide-gt-md class="md-icon-button" aria-label="Settings"  ng-click="navigationCtrl.toggleLeft()">
+            <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+        </md-button>
 
-    <div flex></div>
+        <div flex></div>
 
-    <md-tabs hide-sm hide-md flex md-dynamic-height>
-        <md-tab ng-repeat="item in navigationCtrl.items">
-            <md-tab-label>
-                <span ui-sref="{{item.state}}">{{::item.title}}</span>
-            </md-tab-label>
-        </md-tab>
-    </md-tabs>
+        <!--md-tabs hide-sm hide-md flex md-dynamic-height>
+            <md-tab ng-repeat="item in navigationCtrl.items">
+                <md-tab-label>
+                    <span ui-sref="{{item.state}}">{{::item.title}}</span>
+                </md-tab-label>
+            </md-tab>
+        </md-tabs -->
 
-    <md-button class="md-icon-button" aria-label="Favorite">
-        <md-icon md-svg-icon="img/icons/favorite.svg" style="color: greenyellow;"></md-icon>
-    </md-button>
+        <!--md-icon md-svg-icon="img/icons/ic_account_circle_black_24px.svg">
+        </md-icon-->
 
-    <md-button class="md-icon-button" aria-label="More">
-        <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
-    </md-button>
+        <md-button class="md-icon-button" aria-label="More"  ng-click="navigationCtrl.toggleRight()">
+            <img src="http://lorempixel.com/45/45/people/?1"  alt="image caption">
+        </md-button>
+
+        <md-button class="md-icon-button" aria-label="More"  ng-click="navigationCtrl.toggleRight()">
+            <md-icon md-svg-icon="img/icons/more_vert.svg"></md-icon>
+        </md-button>
+    </div>
 </md-toolbar>

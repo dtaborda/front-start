@@ -15,12 +15,7 @@ define('nav-menu.component',['angular'],
 						templateUrl: 'app/components/nav-menu/nav-menu.template.html',
 						replace:true,
 						link: function(scope){
-							var vm = this;
-							scope.$root.$on('$stateChangeSuccess', function(event, toState) {
-								//vm.currentTab = toState.data.selectedTab;
-								console.log(event);
-								console.log(toState);
-							});
+
 						},
 
 						controller: [
