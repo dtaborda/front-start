@@ -9463,12 +9463,12 @@ define('app', [
 		paths:{
 			'app':'app/app',
 			'configuration':'app/config/main.config',
-			'angular':' http://dtaborda.github.io/front-start/vendor/angular/angular',
-			'angular-router':'http://dtaborda.github.io/front-start/vendor/angular-ui-router/release/angular-ui-router.min',
-			'angular-aria':'http://dtaborda.github.io/front-start/vendor/angular-aria/angular-aria',
-			'angular-animate':'http://dtaborda.github.io/front-start/vendor/angular-animate/angular-animate',
-			'angular-material':'http://dtaborda.github.io/front-start/vendor/angular-material/angular-material',
-			'jquery':'http://dtaborda.github.io/front-start/vendor/jquery/dist/jquery.min',
+			'angular':' front-start/vendor/angular/angular',
+			'angular-router':'front-start/vendor/angular-ui-router/release/angular-ui-router.min',
+			'angular-aria':'front-start/vendor/angular-aria/angular-aria',
+			'angular-animate':'front-start/vendor/angular-animate/angular-animate',
+			'angular-material':'front-start/vendor/angular-material/angular-material',
+			'jquery':'front-start/vendor/jquery/dist/jquery.min',
 			'about.route':'app/routes/about/about.route',
 			'about.controller':'app/routes/about/about.controller',
 			'home.route':'app/routes/home/home.route',
@@ -9489,7 +9489,7 @@ define('app', [
 			'nav-menu.component': 'app/components/nav-menu/nav-menu.component',
 			'side-nav-menu.component': 'app/components/side-nav-menu/side-nav-menu.component',
 			'side-nav-user.component': 'app/components/side-nav-user/side-nav-user.component',
-			'angular-youtube':'http://dtaborda.github.io/front-start/vendor/angular-youtube-mb/dist/angular-youtube-embed.min',
+			'angular-youtube':'front-start/vendor/angular-youtube-mb/dist/angular-youtube-embed.min',
 			'component.component': 'app/components/component/component.component'
 		},
 		shim:{
