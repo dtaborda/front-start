@@ -9463,7 +9463,7 @@ define('app', [
 		paths:{
 			'app':'app/app',
 			'configuration':'app/config/main.config',
-			'angular':' front-start/vendor/angular/angular',
+			'angular':'front-start/vendor/angular/angular',
 			'angular-router':'front-start/vendor/angular-ui-router/release/angular-ui-router.min',
 			'angular-aria':'front-start/vendor/angular-aria/angular-aria',
 			'angular-animate':'front-start/vendor/angular-animate/angular-animate',
