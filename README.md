@@ -11,7 +11,6 @@ npm install
 gulp
 ```
 
-```
 #Demo
-http://dtaborda.github.io/front-start/#/
-```
+http://dtaborda.github.io/front-start/
+
